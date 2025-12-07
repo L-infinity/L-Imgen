@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L Imgen - AI Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <h1>L Imgen</h1>
+                </div>
+                <p class="tagline">AI Image Generator</p>
+            </div>
+            
+            <nav class="nav">
+                <ul>
+                    <li><a href="#generate" class="nav-link active"><i class="fas fa-magic"></i> Generate</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="https://github.com" target="_blank" class="nav-link github-link"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Create AI Images Instantly</h2>
+                    <p>Free and open source image generation tool</p>
+                    <div class="cta-buttons">
+                        <a href="#generate" class="btn btn-primary">Start Creating</a>
+                        <a href="https://github.com" target="_blank" class="btn btn-secondary">View Source</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="ai-visual">
+                        <div class="pulse-circle"></div>
+                        <i class="fas fa-image"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Generator Section -->
+        <section id="generate" class="generator-section">
+            <div class="container">
+                <h2 class="section-title">Image Generator</h2>
+                <p class="section-subtitle">Describe what you want to create</p>
+                
+                <div class="generator-container">
+                    <div class="input-section">
+                        <div class="prompt-input">
+                            <label for="prompt">Image Prompt</label>
+                            <textarea id="prompt" placeholder="A beautiful sunset over mountains..."></textarea>
+                            <div class="char-count">
+                                <span id="charCount">0</span> characters
+                            </div>
+                        </div>
+                        
+                        <div class="settings">
+                            <div class="setting-group">
+                                <label for="style">Style</label>
+                                <select id="style">
+                                    <option value="">Default</option>
+                                    <option value="realistic">Realistic</option>
+                                    <option value="fantasy">Fantasy</option>
+                                    <option value="anime">Anime</option>
+                                </select>
+                            </div>
+                            
+                            <div class="setting-group">
+                                <label for="size">Size</label>
+                                <select id="size">
+                                    <option value="512x512">512×512</option>
+                                    <option value="768x768">768×768</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button id="generateBtn" class="btn btn-generate">
+                            Generate Image
+                        </button>
+                        
+                        <div class="sample-prompts">
+                            <p>Try these:</p>
+                            <div class="prompt-chips">
+                                <span class="prompt-chip">Cyberpunk city at night</span>
+                                <span class="prompt-chip">Fantasy castle</span>
+                                <span class="prompt-chip">Astronaut cat</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="output-section">
+                        <div class="image-preview">
+                            <div id="loading" class="loading">
+                                <div class="spinner"></div>
+                                <p>Generating...</p>
+                            </div>
+                            <img id="generatedImage" alt="Generated image">
+                            <div id="placeholder" class="placeholder">
+                                <i class="fas fa-image"></i>
+                                <p>Image will appear here</p>
+                            </div>
+                        </div>
+                        
+                        <div class="image-actions">
+                            <button id="downloadBtn" class="btn btn-action" disabled>
+                                <i class="fas fa-download"></i> Download
+                            </button>
+                            <button id="regenerateBtn" class="btn btn-action" disabled>
+                                <i class="fas fa-redo"></i> Again
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About L Imgen</h2>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Free Open Source Tool</h3>
+                        <p>L Imgen is a completely free AI image generation tool. Generate unique images without any cost.</p>
+                        
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-lock-open"></i>
+                                <h4>Open Source</h4>
+                                <p>Code available on GitHub for everyone.</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-coins"></i>
+                                <h4>Free</h4>
+                                <p>No charges, no subscriptions.</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Private</h4>
+                                <p>Your images remain yours.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="developer-info">
+                            <h3>Developer</h3>
+                            <div class="developer-card">
+                                <div class="dev-details">
+                                    <h4>B Lokajna Reddy</h4>
+                                    <p>Developer & Open Source Contributor</p>
+                                    <div class="dev-links">
+                                        <a href="https://github.com" target="_blank" class="dev-link"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <div class="code-visual">
+                            <div class="code-header">
+                                <div class="code-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <span class="code-title">l-imgen.js</span>
+                            </div>
+                            <pre><code>// Free image generator
+function generateImage(prompt) {
+  const url = `https://image.pollinations.ai/prompt/${prompt}`;
+  return url;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-robot"></i>
+                        <h3>L Imgen</h3>
+                    </div>
+                    <p class="footer-description">Free open source AI image generator</p>
+                    <div class="footer-social">
+                        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Project</h4>
+                    <ul>
+                        <li><a href="#generate">Generate</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Developer</h4>
+                    <ul>
+                        <li>B Lokajna Reddy</li>
+                        <li>Open Source Developer</li>
+                        <li><a href="https://github.com" target="_blank">GitHub Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 L Imgen. Open source project by B Lokajna Reddy.</p>
+                <p>Free to use and modify.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
