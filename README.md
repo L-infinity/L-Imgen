@@ -13,10 +13,11 @@ A free and open source AI image generation tool with dark theme and blue color s
 
 ## Usage
 
-1. Visit the [L Imgen website](https://your-username.github.io/l-imgen)
+1. Visit the [L Imgen website](https://l-infinity.github.io/L-Imgen/)
 2. Enter a prompt describing the image you want
 3. Select style and size (optional)
 4. Click "Generate Image"
 5. Download your generated image
+
 
 #
